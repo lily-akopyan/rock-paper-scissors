@@ -4,3 +4,6 @@ function getComputerChoice() {
     return output[ran];
 }
 
+function getUserChoice() {
+    return prompt("Rock, Paper or Scissors? ");;
+}
