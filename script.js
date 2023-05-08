@@ -48,13 +48,13 @@ function game() {
             case "You win! Paper beats Rock!":
             case "You win! Scissors beat Paper!":
             case "You win! Rock beats Scissors!":
-                userScore += 1;
+                ++userScore;
                 console.log("Score (you:computer): " + userScore + ":" + computerScore);
                 break;
             case "You lose! Rock beats Scissors!":
             case "You lose! Paper beats Rock!":
             case "You lose! Scissors beat Paper!":
-                computerScore += 1;
+                ++computerScore;
                 console.log("Score (you:computer): " + userScore + ":" + computerScore);
                 break;
             case "Draw":
