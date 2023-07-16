@@ -15,7 +15,7 @@ let userScore = 0;
 let outcome;
 
 function getUserChoice(e) {
-    let userChoice = e.taget.id;
+    let userChoice = (e.target.id);
     console.log(userChoice);
 }
 
