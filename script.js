@@ -1,3 +1,9 @@
+const btns = document.querySelectorAll('.choicebtn');
+console.log(btns);
+btns.forEach(btn => {
+    btn.addEventListener('click', getUserChoice);
+})
+
 function getComputerChoice() {
     const output = ["rock", "paper", "scissors"];
     let ran = Math.floor(Math.random() * 3);
@@ -8,9 +14,11 @@ let computerScore = 0;
 let userScore = 0;
 let outcome;
 
-function getUserChoice() {
-    return prompt("Rock, Paper or Scissors? ");;
+function getUserChoice(e) {
+    let userChoice = e.taget.id;
+    console.log(userChoice);
 }
+
 
 function playRound(computerSelection, userSelection) {
     userSelection = userSelection.trim().toLowerCase();
@@ -40,7 +48,7 @@ function playRound(computerSelection, userSelection) {
     return outcome;
 }
 
-function game() {
+/*function game() {
     for (let i = 0; i < 5; i++) {
         playRound(getComputerChoice(), getUserChoice());
         console.log(outcome)
@@ -72,3 +80,4 @@ function game() {
         console.log("It's a draw!");
     }
 }
+*/
