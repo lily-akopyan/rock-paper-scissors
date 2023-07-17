@@ -43,7 +43,7 @@ function playRound(computerSelection, userSelection) {
             outcome = "You lose! Scissors beat Paper!";
         }
     }
-    document.getElementById('comp').textContent = computerSelection;
+    document.getElementById('comp').textContent = capitalise(computerSelection);
     document.getElementById('round').textContent = outcome;
     console.log("Computer chose: " + computerSelection);
     console.log("You chose: " + userSelection);
