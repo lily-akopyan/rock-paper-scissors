@@ -17,11 +17,11 @@ let outcome;
 function getUserChoice(e) {
     let userChoice = (e.target.id);
     console.log(userChoice);
+    playRound(getComputerChoice(), userChoice)
 }
 
 
 function playRound(computerSelection, userSelection) {
-    userSelection = userSelection.trim().toLowerCase();
     if (computerSelection == userSelection) {
         outcome = "Draw";
     } else if (computerSelection == "rock") {
