@@ -56,12 +56,27 @@ function playRound(computerSelection, userSelection) {
     document.getElementById('round').textContent = outcome;
     document.getElementById('user-score').textContent = userScore;
     document.getElementById('comp-score').textContent = computerScore;
-    return outcome;
+    gameOver();
+}
+
+//Determine the winner if user or computer reach 5 points
+function gameOver() {
+    if (computerScore == 5 || userScore == 5) {
+        btns.forEach(btn => {
+            btn.removeEventListener('click', getUserChoice);
+        })
+        document.getElementById('gameover').textContent = 'GAME OVER';
+        if (userScore > computerScore) {
+            document.getElementById('winner').textContent = 'Congratulations! You won!';
+        } else {
+            document.getElementById('winner').textContent = 'The computer won!';
+        }
+    }
 }
 
 //Capitalise first letter of a string 
-function capitalise(str){
-return str.charAt(0).toUpperCase() + str.slice(1);
+function capitalise(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 
