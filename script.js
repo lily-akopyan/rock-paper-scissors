@@ -1,7 +1,6 @@
 //Event listeners for the user choice buttons 
 //and set the user choice based on click
 const btns = document.querySelectorAll('.choicebtn');
-console.log(btns);
 btns.forEach(btn => {
     btn.addEventListener('click', getUserChoice);
 })
@@ -9,7 +8,6 @@ btns.forEach(btn => {
 //Read id of clicked button and set userChoice to that id
 function getUserChoice(e) {
     let userChoice = (e.target.id);
-    console.log(userChoice);
     playRound(getComputerChoice(), userChoice)
 }
 
@@ -58,8 +56,6 @@ function playRound(computerSelection, userSelection) {
     document.getElementById('round').textContent = outcome;
     document.getElementById('user-score').textContent = userScore;
     document.getElementById('comp-score').textContent = computerScore;
-    console.log("Computer chose: " + computerSelection);
-    console.log("You chose: " + userSelection);
     return outcome;
 }
 
