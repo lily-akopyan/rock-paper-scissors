@@ -50,6 +50,10 @@ function playRound(computerSelection, userSelection) {
     return outcome;
 }
 
+function capitalise(str){
+return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 /*function game() {
     for (let i = 0; i < 5; i++) {
         playRound(getComputerChoice(), getUserChoice());
