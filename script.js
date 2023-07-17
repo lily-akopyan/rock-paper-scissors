@@ -32,24 +32,32 @@ function playRound(computerSelection, userSelection) {
     } else if (computerSelection == "rock") {
         if (userSelection == "paper") {
             outcome = "You win! Paper beats Rock!";
+            ++userScore;
         } else {
             outcome = "You lose! Rock beats Scissors!";
+            ++computerScore;
         }
     } else if (computerSelection == "paper") {
         if (userSelection == "rock") {
             outcome = "You lose! Paper beats Rock!";
+            ++computerScore;
         } else {
             outcome = "You win! Scissors beat Paper!";
+            ++userScore;
         }
     } else {
         if (userSelection == "rock") {
             outcome = "You win! Rock beats Scissors!";
+            ++userScore;
         } else {
             outcome = "You lose! Scissors beat Paper!";
+            ++computerScore;
         }
     }
     document.getElementById('comp').textContent = capitalise(computerSelection);
     document.getElementById('round').textContent = outcome;
+    document.getElementById('user-score').textContent = userScore;
+    document.getElementById('comp-score').textContent = computerScore;
     console.log("Computer chose: " + computerSelection);
     console.log("You chose: " + userSelection);
     return outcome;
