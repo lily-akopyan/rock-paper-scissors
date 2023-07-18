@@ -1,4 +1,4 @@
-body{
+body {
     background-image: url("bg1.jpg");
     color: #ffffff;
     text-align: center;
@@ -6,40 +6,116 @@ body{
     font-family: 'VT323', monospace;
 }
 
-.container.head{
+.container.head {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-div.head > *{
+div.head>* {
     margin: 0;
 }
 
-#subhead{
+#subhead {
     width: 300px;
     padding: 2px;
     background-color: #18124158;
     box-shadow: 0 0 5px 5px #18124158;
 }
 
-#choicebtns{
+#choicebtns {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
     margin-top: 10px;
 }
 
-button{
-    width: 200px;
-    height: 180px;
+button.choicebtn {
+    position: absolute;
+    width: 190px;
+    height: 190px;
     margin: 15px;
     font-size: 30px;
     color: #ffffff;
-    background-color: #751ca6;
-    border: 2px solid #110b2f;
+    background-color: #761ca600;
+    border: 2px solid #110b2f00;
     border-radius: 10px;
     font-family: 'VT323', monospace;
 }
-button:hover{
-    font-size: 40px;
-    font-weight: 700;
+
+#rock {
+    left: 250px;
+    background-image: url("rock.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#paper {
+    background-image: url("paper.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #000000;
+}
+
+#scissors {
+    right: 250px;
+    background-image: url("scissors.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #585054;
+}
+
+button.choicebtn:hover {
+    width: 200px;
+    height: 200px;
     cursor: pointer;
+}
+button.choicebtn:active{
+    opacity: 0.5;
+}
+
+#outcomes{
+    margin-top: 250px;
+}
+
+.container.popup{
+    display: flex;
+    justify-content: center;
+}
+
+#popup{
+    position: absolute;
+    text-align: center;
+    top: 75px;
+    z-index: 2;
+    width: 400px;
+    height: 300px;
+    border: 2px solid #74159ad4;
+    background-color: #110b2ffa;
+    box-shadow: 0 0 5px 5px #74159ad4;
+    border-radius: 10px;
+}
+
+#resetbtn{
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: 900;
+    font-family: 'VT323', monospace;;
+    color: #110b2f;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+}
+
+#resetbtn:hover{
+    cursor: pointer;
+    font-size: 40px;
+}
+
+#resetbtn:active{
+    background-color: #7f7984;
+    color: #332d55;
 }
