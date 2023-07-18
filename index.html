@@ -5,17 +5,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
 </head>
 
 <body>
-    <h1>ROCK PAPER SCISSORS</h1>
-    <button class="choicebtn" id="rock">ROCK</button>
-    <button class="choicebtn" id="paper">PAPER</button>
-    <button class="choicebtn" id="scissors">SCISSORS</button>
+    <div class="container head">
+        <h1>ROCK PAPER SCISSORS</h1>
+        <p id="subhead">First to 5 points wins</p>
+    </div>
+    <div id="choicebtns">
+        <button class="choicebtn" id="rock">ROCK</button>
+        <button class="choicebtn" id="paper">PAPER</button>
+        <button class="choicebtn" id="scissors">SCISSORS</button>
+    </div>
     <div id="outcomes">
         <p>Computer chose: <span id="comp"></span></p>
         <p>Round result: <span id="round"></span></p>
