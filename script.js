@@ -5,7 +5,9 @@ btns.forEach(btn => {
     btn.addEventListener('click', getUserChoice);
 })
 //Refresh page on click
-document.getElementById('resetbtn').addEventListener('click', () => location.reload());
+const reset = document.getElementById('resetbtn');
+reset.addEventListener('click', () => location.reload());
+
 //Read id of clicked button and set userChoice to that id
 function getUserChoice(e) {
     let userChoice = (e.target.id);
@@ -63,9 +65,13 @@ function playRound(computerSelection, userSelection) {
 //Determine the winner if user or computer reach 5 points
 function gameOver() {
     if (computerScore == 5 || userScore == 5) {
+        //remove event listener and disable cursor interaction for buttons
         btns.forEach(btn => {
             btn.removeEventListener('click', getUserChoice);
+            btn.classList.add('disabled');
         })
+        //show game over popup
+        document.getElementById('popup').classList.add('show');
         document.getElementById('gameover').textContent = 'GAME OVER';
         if (userScore > computerScore) {
             document.getElementById('winner').textContent = 'Congratulations! You won!';

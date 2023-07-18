@@ -67,14 +67,19 @@ button.choicebtn {
     color: #585054;
 }
 
-button.choicebtn:hover {
+.choicebtn:hover {
     width: 200px;
     height: 200px;
     cursor: pointer;
 }
-button.choicebtn:active{
+
+.choicebtn:active{
     opacity: 0.5;
 }
+
+.disabled {
+    pointer-events: none;
+  }
 
 #outcomes{
     margin-top: 250px;
@@ -96,7 +101,12 @@ button.choicebtn:active{
     background-color: #110b2ffa;
     box-shadow: 0 0 5px 5px #74159ad4;
     border-radius: 10px;
+    visibility: hidden;
 }
+
+.show {
+    visibility: visible !important;
+  }
 
 #resetbtn{
     margin-top: 20px;
