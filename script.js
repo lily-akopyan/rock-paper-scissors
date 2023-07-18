@@ -4,7 +4,8 @@ const btns = document.querySelectorAll('.choicebtn');
 btns.forEach(btn => {
     btn.addEventListener('click', getUserChoice);
 })
-
+//Refresh page on click
+document.getElementById('resetbtn').addEventListener('click', () => location.reload());
 //Read id of clicked button and set userChoice to that id
 function getUserChoice(e) {
     let userChoice = (e.target.id);
