@@ -1,9 +1,12 @@
 body {
+    min-height: 100vh;
     background-image: url("bg1.jpg");
     color: #ffffff;
     text-align: center;
     font-size: 30px;
     font-family: 'VT323', monospace;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container.head {
@@ -81,13 +84,24 @@ button.choicebtn {
     pointer-events: none;
   }
 
-#outcomes{
-    margin-top: 250px;
-}
-
 .container.popup{
     display: flex;
     justify-content: center;
+}
+
+#outcomes{
+    width: 600px;
+    background-color: #000000;
+    margin: 250px auto 0 auto;
+    text-align: center;
+}
+
+td{
+    width: 300px;
+}
+
+tr{
+    height: 40px;
 }
 
 #popup{
@@ -128,4 +142,8 @@ button.choicebtn {
 #resetbtn:active{
     background-color: #7f7984;
     color: #332d55;
+}
+
+footer{
+    margin-top: 30px;
 }
