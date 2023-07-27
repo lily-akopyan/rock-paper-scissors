@@ -24,10 +24,12 @@ function getComputerChoice() {
 //Initialize variables
 let computerScore = 0;
 let userScore = 0;
-let outcome;
+
 
 //Play one round and display results
 function playRound(computerSelection, userSelection) {
+    let outcome;
+
     if (computerSelection == userSelection) {
         outcome = "Draw";
     } else if (computerSelection == "rock") {
@@ -55,6 +57,7 @@ function playRound(computerSelection, userSelection) {
             ++computerScore;
         }
     }
+    document.getElementById('you').textContent = capitalise(userSelection);
     document.getElementById('comp').textContent = capitalise(computerSelection);
     document.getElementById('round').textContent = outcome;
     document.getElementById('user-score').textContent = userScore;
@@ -87,7 +90,7 @@ function capitalise(str) {
 }
 
 
-//Old play game function for console no user output 
+    //Old play game function for console no user output 
 
 /*function game() {
     for (let i = 0; i < 5; i++) {
@@ -112,7 +115,7 @@ function capitalise(str) {
         }
     }
     console.log("Game Over!");
-
+ 
     if (userScore > computerScore) {
         console.log("You won!");
     } else if (userScore < computerScore) {
