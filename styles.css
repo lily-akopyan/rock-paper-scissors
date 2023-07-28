@@ -52,28 +52,25 @@ div.head>* {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
     margin-top: 10px;
 }
 
 button.choicebtn {
     position: absolute;
-    width: 190px;
-    height: 190px;
-    margin: 15px;
-    font-size: 30px;
-    color: #ffffff;
-    background-color: #761ca600;
-    border: 2px solid #110b2f00;
-    border-radius: 10px;
+    width: 15vw;
+    height: 15vw;
+    margin-top: 15px;
+    background-color: #00000000;
+    border: none;
 }
+
 #rock, #paper, #scissors{
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #rock {
-    left: 250px;
+    left: 20vw;
     background-image: url("rock.png");
 }
 
@@ -82,13 +79,13 @@ button.choicebtn {
 }
 
 #scissors {
-    right: 250px;
+    right: 20vw;
     background-image: url("scissors.png");
 }
 
 .choicebtn:hover {
-    width: 200px;
-    height: 200px;
+    width: 16vw;
+    height: 16vw;
     cursor: pointer;
 }
 
@@ -106,7 +103,7 @@ button.choicebtn {
 }
 
 #outcomes{
-    width: 600px;
+    width: 45%;
     background-color: #000000;
     margin: 250px auto 0 auto;
     text-align: center;
