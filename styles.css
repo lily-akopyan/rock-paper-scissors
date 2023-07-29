@@ -26,7 +26,7 @@ div.head>* {
     box-shadow: 0 0 5px 5px #18124158;
 }
 
-#help{
+#help {
     width: 40px;
     height: 40px;
     line-height: 40px;
@@ -41,7 +41,7 @@ div.head>* {
     border-radius: 50%;
 }
 
-#help:hover{
+#help:hover {
     width: 45px;
     height: auto;
     line-height: 45px;
@@ -64,7 +64,9 @@ button.choicebtn {
     border: none;
 }
 
-#rock, #paper, #scissors{
+#rock,
+#paper,
+#scissors {
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -89,35 +91,44 @@ button.choicebtn {
     cursor: pointer;
 }
 
-.choicebtn:active{
+.choicebtn:active {
     opacity: 0.5;
 }
 
 .disabled {
     pointer-events: none;
-  }
+}
 
-.container.popup{
+.container.popup {
     display: flex;
     justify-content: center;
 }
 
-#outcomes{
+#outcomes {
     width: 45%;
-    background-color: #000000;
+    background-color: #000000df;
+    border-radius: 10px;
     margin: 250px auto 0 auto;
     text-align: center;
+    border-collapse: collapse;
 }
 
-td{
+td {
     width: 300px;
+    border-bottom: 2px solid #332d55;
+    border-top: 2px solid #332d55;
+    border-collapse: collapse;
 }
 
-tr{
+td:last-child {
+    border-bottom: none;
+}
+
+tr {
     height: 40px;
 }
 
-#popup{
+#popup {
     position: absolute;
     text-align: center;
     top: 75px;
@@ -133,13 +144,13 @@ tr{
 
 .show {
     visibility: visible !important;
-  }
+}
 
-#resetbtn{
+#resetbtn {
     margin-top: 20px;
     font-size: 35px;
     font-weight: 900;
-    font-family: 'VT323', monospace;;
+    font-family: 'VT323', monospace;
     color: #110b2f;
     background-color: #ffffff;
     border-radius: 10px;
@@ -147,16 +158,16 @@ tr{
     padding: 5px;
 }
 
-#resetbtn:hover{
+#resetbtn:hover {
     cursor: pointer;
     font-size: 40px;
 }
 
-#resetbtn:active{
+#resetbtn:active {
     background-color: #7f7984;
     color: #332d55;
 }
 
-footer{
+footer {
     margin-top: 30px;
 }
