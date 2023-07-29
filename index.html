@@ -16,12 +16,34 @@
         <h1>ROCK PAPER SCISSORS</h1>
         <p id="subhead">First to 5 points wins</p>
     </div>
+
     <div id="help">?</div>
+    <div class="container popup">
+        <div id="helppopup">
+            <span class="close" id="close">+</span>
+            <h2>How to play</h2>
+            <div id="help-txt">
+                <p>Do you really not know how to play rock paper scissors? *sigh* okay, here we go:</p>
+                <p>You and your opponent chose a weapon (rock paper or scissors duh) and the battle begins...</p>
+                <ul>
+                    <li>Rock beats Scissors (because rock breaks the blades)</li>
+                    <li>Scissors beat Paper (scissors can cut paper how surprising)</li>
+                    <li>Paper beats Rock (paper wraps around the rock and that defeats it somehow??? I dunno just go
+                        with it dude)</li>
+                </ul>
+                <p>The winner of the round gets a point, if it's a draw noone gets points.</p>
+                <p>Play until you or your opponent get 5 points.</p>
+                <p>And that's it! Enjoy the game you weirdo...</p>
+            </div>
+        </div>
+    </div>
+
     <div id="choicebtns">
         <button class="choicebtn" id="rock"></button>
         <button class="choicebtn" id="paper"></button>
         <button class="choicebtn" id="scissors"></button>
     </div>
+
     <table id="outcomes">
         <tr>
             <th colspan="2">SCORES</th>
@@ -42,8 +64,9 @@
             <td colspan="2" id="round">round result</td>
         </tr>
     </table>
+
     <div class="container popup">
-        <div id="popup" class="">
+        <div id="gamepopup" class="">
             <p id="gameover"></p>
             <p id="winner"></p>
             <button id="resetbtn">PLAY AGAIN</button>
@@ -64,7 +87,6 @@
         -final boss epic music fire effects final game ?????
         -animate buttons and tables
         -add win/lose animations
-        -add '?' menu with instructions
         -add music on/off toggle
 
 -->

@@ -4,7 +4,28 @@ const btns = document.querySelectorAll('.choicebtn');
 btns.forEach(btn => {
     btn.addEventListener('click', getUserChoice);
 })
-//Refresh page on click
+
+//Function removes event listener 
+//and disables cursor interaction for choice buttons
+function btnsRemove() {
+    btns.forEach(btn => {
+        btn.removeEventListener('click', getUserChoice);
+        btn.classList.add('disabled');
+    })
+}
+//Event listener for help button
+const help = document.getElementById('help');
+help.addEventListener('click', () => {
+    document.getElementById('helppopup').classList.add('show');
+})
+
+//Event listener for close button
+const close = document.getElementById('close');
+close.addEventListener('click', () => {
+    document.getElementById('helppopup').classList.remove('show');
+})
+
+//Refresh page on click (play again button)
 const reset = document.getElementById('resetbtn');
 reset.addEventListener('click', () => location.reload());
 
@@ -69,12 +90,9 @@ function playRound(computerSelection, userSelection) {
 function gameOver() {
     if (computerScore == 5 || userScore == 5) {
         //remove event listener and disable cursor interaction for buttons
-        btns.forEach(btn => {
-            btn.removeEventListener('click', getUserChoice);
-            btn.classList.add('disabled');
-        })
+        btnsRemove()
         //show game over popup
-        document.getElementById('popup').classList.add('show');
+        document.getElementById('gamepopup').classList.add('show');
         document.getElementById('gameover').textContent = 'GAME OVER';
         if (userScore > computerScore) {
             document.getElementById('winner').textContent = 'Congratulations! You won!';
