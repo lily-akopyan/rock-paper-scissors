@@ -135,31 +135,32 @@ tr {
 }
 
 #helppopup{
-    width: 50vw;
+    width: 60vw;
     font-size: 1.4rem;
 }
+
 #help-txt{
     text-align: left;
-    padding: 0px 10px ;
+    padding: 0px 20px ;
 }
 
 #gamepopup,
 #helppopup {
     position: absolute;
     visibility: hidden;
-    top: 75px;
+    top: 83px;
     z-index: 2;
-    border: 2px solid #74159ad4;
+    border: 2px solid #d99bb2d4;
     background-color: #110b2ffa;
-    box-shadow: 0 0 5px 5px #74159ad4;
+    box-shadow: 0 0 5px 5px #d99bb2d4;
     border-radius: 10px;
 }
 
 .close {
     font-size: 4rem;
     font-weight: 600;
-    display: inline-block;
-    transform: rotate(45deg);
+    /* display: inline-block;
+    transform: rotate(45deg); */
     position:absolute;
     top: 0px;
     right: 20px;
